@@ -25,12 +25,12 @@ stages:
       md5: f7b1674ccce25932b460c037f568637a
       size: 78044
   train:
-    cmd: .venv/bin/python -m codigo.baseline
+    cmd: .venv/bin/python -m codigo.train
     deps:
-    - path: codigo/baseline.py
+    - path: codigo/train.py
       hash: md5
-      md5: 32bfc09f123ad5b9efe18b79ec6f42bf
-      size: 1840
+      md5: 0b1a58b52290e7f7c262868692db0cc8
+      size: 6669
     - path: datos/test.csv
       hash: md5
       md5: d0d9d7165ae88def1311cf3e0e57dc76
@@ -41,6 +41,11 @@ stages:
       size: 78044
     params:
       params.yaml:
+        mlflow.dataset_name: xm_demanda_horaria
+        mlflow.experiment_name: pronostico-demanda-electrica
+        mlflow.fuente: xm-open-meteo-dvc
+        mlflow.run_name: sarimax-candidato-sin-exogena
+        mlflow.tracking_uri: sqlite:///mlflow.db
         model.order:
         - 2
         - 1
@@ -54,5 +59,5 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: 2325dfbe80a1a339362c0de4f1369b3d
-      size: 60
+      md5: 38307ad04abd9424d577c608a464381e
+      size: 163
