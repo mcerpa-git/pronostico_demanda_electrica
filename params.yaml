@@ -1,0 +1,8 @@
+prepare:
+  dias_entrenamiento: 88
+  horas_prueba: 48
+
+model:
+  order: [2, 1, 0]
+  seasonal_order: [1, 1, 1, 24]
+  usar_exogena: false

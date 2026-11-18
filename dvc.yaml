@@ -1,0 +1,26 @@
+stages:
+  prepare:
+    cmd: .venv/bin/python -m codigo.prepare
+    deps:
+      - datos/xm_demanda.csv
+      - codigo/prepare.py
+    params:
+      - prepare.dias_entrenamiento
+      - prepare.horas_prueba
+    outs:
+      - datos/train.csv
+      - datos/test.csv
+
+  train:
+    cmd: .venv/bin/python -m codigo.baseline
+    deps:
+      - datos/train.csv
+      - datos/test.csv
+      - codigo/baseline.py
+    params:
+      - model.order
+      - model.seasonal_order
+      - model.usar_exogena
+    metrics:
+      - metrics.json:
+          cache: false

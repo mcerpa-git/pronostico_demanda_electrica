@@ -1,0 +1,58 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: .venv/bin/python -m codigo.prepare
+    deps:
+    - path: codigo/prepare.py
+      hash: md5
+      md5: 5146b5ac98ff6f4ed1d3a95fbf757cd8
+      size: 2342
+    - path: datos/xm_demanda.csv
+      hash: md5
+      md5: ea2854048cc546ceda3957643ca14986
+      size: 84735
+    params:
+      params.yaml:
+        prepare.dias_entrenamiento: 88
+        prepare.horas_prueba: 48
+    outs:
+    - path: datos/test.csv
+      hash: md5
+      md5: d0d9d7165ae88def1311cf3e0e57dc76
+      size: 1775
+    - path: datos/train.csv
+      hash: md5
+      md5: f7b1674ccce25932b460c037f568637a
+      size: 78044
+  train:
+    cmd: .venv/bin/python -m codigo.baseline
+    deps:
+    - path: codigo/baseline.py
+      hash: md5
+      md5: 32bfc09f123ad5b9efe18b79ec6f42bf
+      size: 1840
+    - path: datos/test.csv
+      hash: md5
+      md5: d0d9d7165ae88def1311cf3e0e57dc76
+      size: 1775
+    - path: datos/train.csv
+      hash: md5
+      md5: f7b1674ccce25932b460c037f568637a
+      size: 78044
+    params:
+      params.yaml:
+        model.order:
+        - 2
+        - 1
+        - 0
+        model.seasonal_order:
+        - 1
+        - 1
+        - 1
+        - 24
+        model.usar_exogena: false
+    outs:
+    - path: metrics.json
+      hash: md5
+      md5: 2325dfbe80a1a339362c0de4f1369b3d
+      size: 60
