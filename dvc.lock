@@ -44,7 +44,7 @@ stages:
         mlflow.dataset_name: xm_demanda_horaria
         mlflow.experiment_name: pronostico-demanda-electrica
         mlflow.fuente: xm-open-meteo-dvc
-        mlflow.run_name: sarimax-alternativo-sin-exogena
+        mlflow.run_name: sarimax-alternativo-con-exogena
         mlflow.tracking_uri: sqlite:///mlflow.db
         model.order:
         - 1
@@ -55,9 +55,9 @@ stages:
         - 1
         - 0
         - 24
-        model.usar_exogena: false
+        model.usar_exogena: true
     outs:
     - path: metrics.json
       hash: md5
-      md5: 70a13224b0f2803c68f28c8121745d56
-      size: 159
+      md5: fba26c267e4366bdc3aebedb9e8c54c9
+      size: 161
