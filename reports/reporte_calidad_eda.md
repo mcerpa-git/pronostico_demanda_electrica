@@ -1,8 +1,8 @@
 # Reporte de calidad y EDA
 
 - Archivo analizado: `datos/xm_demanda.csv`
-- Observaciones: **2184**
-- Rango: **2026-08-15 00:00:00** a **2026-11-13 23:00:00**
+- Observaciones: **2208**
+- Rango: **2026-08-15 00:00:00** a **2026-11-14 23:00:00**
 - Índice ordenado ascendentemente: **True**
 - Timestamps duplicados: **0**
 - Huecos horarios: **0**
@@ -12,8 +12,8 @@
 
 | Variable | Cantidad | Porcentaje | Límite inferior | Límite superior |
 |---|---:|---:|---:|---:|
-| demanda_mwh | 48 | 2.20% | 6187.470 | 14421.893 |
-| temperatura_c | 0 | 0.00% | 4.800 | 26.400 |
+| demanda_mwh | 48 | 2.17% | 6199.433 | 14431.876 |
+| temperatura_c | 0 | 0.00% | 4.550 | 26.550 |
 
 ## Evidencias gráficas
 

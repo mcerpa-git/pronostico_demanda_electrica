@@ -32,6 +32,7 @@ ejecutar_comando([
 ])
 
 print("4. Restaurar el archivo datos/xm_demanda.csv a la versión V3")
+ejecutar_comando(["dvc", "pull", "datos/xm_demanda.csv"])
 ejecutar_comando(["dvc", "checkout", "datos/xm_demanda.csv"])
 
 print("5. Verificar que el archivo datos/xm_demanda.csv ha sido restaurado a la versión V3")
