@@ -11,3 +11,9 @@ outs:
   size: 83768
   hash: md5
   path: xm_demanda.csv
+
+#Version 3 - Rango: 2026-08-15 00:00:00 a 2026-11-14 23:00:00
+- md5: ea2854048cc546ceda3957643ca14986
+  size: 84735
+  hash: md5
+  path: xm_demanda.csv
