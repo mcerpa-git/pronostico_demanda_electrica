@@ -12,15 +12,20 @@ stages:
       - datos/test.csv
 
   train:
-    cmd: .venv/bin/python -m codigo.baseline
+    cmd: .venv/bin/python -m codigo.train
     deps:
       - datos/train.csv
       - datos/test.csv
-      - codigo/baseline.py
+      - codigo/train.py
     params:
       - model.order
       - model.seasonal_order
       - model.usar_exogena
+      - mlflow.tracking_uri
+      - mlflow.experiment_name
+      - mlflow.run_name
+      - mlflow.fuente
+      - mlflow.dataset_name
     metrics:
       - metrics.json:
           cache: false
