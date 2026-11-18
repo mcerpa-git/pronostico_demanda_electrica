@@ -3,12 +3,12 @@ prepare:
   horas_prueba: 48
 
 model:
-  order: [2, 1, 0]
-  seasonal_order: [1, 1, 1, 24]
-  usar_exogena: true
+  order: [1, 1, 1]
+  seasonal_order: [1, 1, 0, 24]
+  usar_exogena: false
 
 mlflow:
-  run_name: sarimax-candidato-con-exogena
+  run_name: sarimax-alternativo-sin-exogena
   tracking_uri: sqlite:///mlflow.db
   experiment_name: pronostico-demanda-electrica
   fuente: xm-open-meteo-dvc
