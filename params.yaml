@@ -5,10 +5,10 @@ prepare:
 model:
   order: [1, 1, 1]
   seasonal_order: [1, 1, 0, 24]
-  usar_exogena: false
+  usar_exogena: true
 
 mlflow:
-  run_name: sarimax-alternativo-sin-exogena
+  run_name: sarimax-alternativo-con-exogena
   tracking_uri: sqlite:///mlflow.db
   experiment_name: pronostico-demanda-electrica
   fuente: xm-open-meteo-dvc
