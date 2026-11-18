@@ -1,0 +1,5 @@
+transformacion,observaciones,adf_estadistico,adf_p_valor,adf_rechaza_raiz_unitaria,kpss_estadistico,kpss_p_valor,kpss_no_rechaza_estacionaria,ambas_coinciden_estacionaria
+original,2208,-5.038813871073492,1.8584942899759376e-05,True,1.0245311402460313,0.01,False,False
+diferencia_regular,2207,-7.3096092802852395,1.2745422509485535e-10,True,0.07832834927740148,0.1,True,True
+diferencia_estacional_24,2184,-4.726606951994298,7.498311711362026e-05,True,0.23058885674550783,0.1,True,True
+diferencia_regular_estacional,2183,-14.03216283932062,3.4193509354403926e-26,True,0.0056368073100515025,0.1,True,True
