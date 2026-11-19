@@ -1,3 +1,5 @@
+## Reporte detallado de la entrega
+Repositorio de git: https://github.com/mcerpa-git/pronostico_demanda_electrica.git
 ## Varias versiones de los datos
 Se generan varias versiones de los datos:
 ![alt text](image.png)
@@ -73,3 +75,10 @@ En efecto se ejecuta todo el pipe.
 
 4. Adicionalmente voy a volver a la version V3 para volver a ejecutar el pipe como versión final.
 ![alt text](image-7.png)
+
+## Verificaciones
+las validaciones las parametricé con 
+```bash
+.venv/bin/python -m codigo.verificaciones_parte6 --commit b34c449
+```
+![alt text](image-8.png)
