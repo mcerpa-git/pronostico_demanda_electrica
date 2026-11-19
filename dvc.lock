@@ -29,8 +29,8 @@ stages:
     deps:
     - path: codigo/train.py
       hash: md5
-      md5: 0b1a58b52290e7f7c262868692db0cc8
-      size: 6669
+      md5: 0b67464d7a3110da795a6ea281a9b0fd
+      size: 10041
     - path: datos/test.csv
       hash: md5
       md5: d0d9d7165ae88def1311cf3e0e57dc76
@@ -44,8 +44,25 @@ stages:
         mlflow.dataset_name: xm_demanda_horaria
         mlflow.experiment_name: pronostico-demanda-electrica
         mlflow.fuente: xm-open-meteo-dvc
-        mlflow.run_name: sarimax-alternativo-con-exogena
+        mlflow.run_name: autoarima-sin-exogena
         mlflow.tracking_uri: sqlite:///mlflow.db
+        model.autoarima:
+          start_p: 0
+          max_p: 3
+          start_q: 0
+          max_q: 3
+          d:
+          max_d: 2
+          start_P: 0
+          max_P: 2
+          start_Q: 0
+          max_Q: 2
+          D:
+          max_D: 1
+          seasonal: true
+          m: 24
+          stepwise: true
+          with_intercept: false
         model.order:
         - 1
         - 1
@@ -55,9 +72,10 @@ stages:
         - 1
         - 0
         - 24
-        model.usar_exogena: true
+        model.tipo_modelo: autoarima
+        model.usar_exogena: false
     outs:
     - path: metrics.json
       hash: md5
-      md5: fba26c267e4366bdc3aebedb9e8c54c9
-      size: 161
+      md5: 3c29c5efa38c07106ccda4356a228fbd
+      size: 162
