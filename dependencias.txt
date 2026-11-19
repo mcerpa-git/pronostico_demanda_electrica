@@ -1,0 +1,9 @@
+pandas<3
+statsmodels
+matplotlib
+pydataxm
+requests
+mlflow
+dvc
+pyyaml
+pmdarima

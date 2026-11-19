@@ -1,18 +1,23 @@
-#Version 1 - Rango: 2026-08-15 00:00:00 a 2026-11-12 23:00:00
+# Notas resumen según lo solicitado en la Guia
+Adicionalmente se tiene un informe un poco mas detallado con evidencias de ejecución y referencia a los script utilizados.
+[reports/reporte_entrega.md](reports/reporte_entrega.md)
+## Version de los datos
+
+Version 1 - Rango: 2026-08-15 00:00:00 a 2026-11-12 23:00:00
 outs:
 - md5: 41acd8a47b157184f5e7d26354c0ef8d
   size: 82875
   hash: md5
   path: xm_demanda.csv
 
-#Version 2 - Rango: 2026-08-15 00:00:00 a 2026-11-13 23:00:00
+Version 2 - Rango: 2026-08-15 00:00:00 a 2026-11-13 23:00:00
 outs:
 - md5: a391cfb8f550999e2fe64e107af7e8ca
   size: 83768
   hash: md5
   path: xm_demanda.csv
 
-#Version 3 - Rango: 2026-08-15 00:00:00 a 2026-11-14 23:00:00
+Version 3 - Rango: 2026-08-15 00:00:00 a 2026-11-14 23:00:00
 - md5: ea2854048cc546ceda3957643ca14986
   size: 84735
   hash: md5
