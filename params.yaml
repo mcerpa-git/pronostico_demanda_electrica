@@ -6,7 +6,7 @@ model:
   tipo_modelo: autoarima
   order: [1, 1, 1]
   seasonal_order: [1, 1, 0, 24]
-  usar_exogena: false
+  usar_exogena: yes
   autoarima:
     start_p: 0
     max_p: 3
@@ -26,7 +26,7 @@ model:
     with_intercept: false
 
 mlflow:
-  run_name: autoarima-sin-exogena
+  run_name: autoarima-con-exogena
   tracking_uri: sqlite:///mlflow.db
   experiment_name: pronostico-demanda-electrica
   fuente: xm-open-meteo-dvc
