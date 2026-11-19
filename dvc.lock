@@ -44,7 +44,7 @@ stages:
         mlflow.dataset_name: xm_demanda_horaria
         mlflow.experiment_name: pronostico-demanda-electrica
         mlflow.fuente: xm-open-meteo-dvc
-        mlflow.run_name: autoarima-sin-exogena
+        mlflow.run_name: autoarima-con-exogena
         mlflow.tracking_uri: sqlite:///mlflow.db
         model.autoarima:
           start_p: 0
@@ -73,9 +73,9 @@ stages:
         - 0
         - 24
         model.tipo_modelo: autoarima
-        model.usar_exogena: false
+        model.usar_exogena: yes
     outs:
     - path: metrics.json
       hash: md5
-      md5: 3c29c5efa38c07106ccda4356a228fbd
-      size: 162
+      md5: cc51b48dce3395ea55a178f2e5e92e5d
+      size: 163
