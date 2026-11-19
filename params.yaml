@@ -3,27 +3,9 @@ prepare:
   horas_prueba: 48
 
 model:
-  tipo_modelo: sarimax
   order: [1, 1, 1]
   seasonal_order: [1, 1, 0, 24]
   usar_exogena: true
-  autoarima:
-    start_p: 0
-    max_p: 3
-    start_q: 0
-    max_q: 3
-    d: null
-    max_d: 2
-    start_P: 0
-    max_P: 2
-    start_Q: 0
-    max_Q: 2
-    D: null
-    max_D: 1
-    seasonal: true
-    m: 24
-    stepwise: true
-    with_intercept: false
 
 mlflow:
   run_name: sarimax-alternativo-con-exogena

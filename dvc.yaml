@@ -18,11 +18,9 @@ stages:
       - datos/test.csv
       - codigo/train.py
     params:
-      - model.tipo_modelo
       - model.order
       - model.seasonal_order
       - model.usar_exogena
-      - model.autoarima
       - mlflow.tracking_uri
       - mlflow.experiment_name
       - mlflow.run_name
