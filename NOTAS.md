@@ -42,3 +42,31 @@ modelo tiene un RMSE mayor que el mejor AutoARIMA.
 Por tanto, elegiría AutoARIMA sin exógena: obtuvo el menor RMSE, MAE y MAPE,
 7870.38, 7840.83 y 357.58 %, aunque su complejidad automática no compense la
 no coincidencia entre sus criterios de ajuste y el desempeño fuera de muestra.
+
+# Reproducir el experimento
+dvc_data_hash
+: ea2854048cc546ceda3957643ca14986
+git_commit
+: 0a1afc03233e8bb92e36e40c0d892a514d4de192
+fuente
+: xm-open-meteo-dvc
+supuesto_exogena
+: sin_temperatura_exogena
+
+![alt text](image-2.png)
+
+dvc_data_hash
+: ea2854048cc546ceda3957643ca14986
+git_commit
+: 25d159cd7b14693c70767894c548edb8c1b2b1cb
+fuente
+: xm-open-meteo-dvc
+supuesto_exogena
+: temperatura_observada_en_tra
+
+![alt text](image-3.png)
+
+### Se logra reproducir los mismos resultados, solo desde el run_id usando el script 
+```bash
+.venv/bin/python -m codigo/reproducir_desde_runid.py
+```
